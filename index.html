@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Site en Construction</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/buildsite.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/buildsite.js"></script>
+</head>
+<body>
+<div id="body">
+    <h1 id="siteName"></h1>
+    <div class="row margin-bot-top">
+        <div class="col-xs-12">
+            Si vous voulez être informé de la mise en ligne du site saisissez votre mail...
+        </div>
+    </div>
+    <div class="row margin-bot-top">
+        <div class="col-xs-offset-2 col-xs-6">
+            <input type="email">
+        </div>
+        <div class="col-xs-2">
+            <button class="popup-button" data-modal="popup">OK</button>
+        </div>
+    </div>
+</div>
+
+<div class="modal blur-effect" id="popup">
+    <div class="popup-content">
+        <h2>Merci</h2>
+        <div class="row">
+            <div class="col-xs-12">
+                Eh non, votre mail ne me permettra pas de vous prévenir. Je vous remercie de l'intêret que vous portez à
+                ce site.
+            </div>
+        </div>
+        <div class="row contact-text">
+            <div class="col-xs-12">
+                Par contre vous pouvez me contacter via
+            </div>
+        </div>
+        <div class="row contact-picto">
+            <div class="col-xs-2 col-xs-offset-4">
+                <a href="mailto:maud.remoriquet@gmail.com" title="Email"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+            </div>
+            <div class="col-xs-2">
+                <a href="https://fr.linkedin.com/in/maudremoriquet" title="Linkedin" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="close">X</div>
+</div>
+
+<div class="overlay"></div>
+</body>
+</html>

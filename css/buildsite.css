@@ -1,0 +1,187 @@
+@font-face {
+    font-family: "Rounded Elegance";
+    src: url("../fonts/rounded_elegance/rounded_elegance.eot");
+    src: url("../fonts/rounded_elegance/rounded_elegance.eot?#iefix") format("embedded-opentype"), url("../fonts/rounded_elegance/rounded_elegance.woff") format("woff"), url("../fonts/rounded_elegance/rounded_elegance.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Cubic";
+    src: url("../fonts/cubic/cubic.eot");
+    src: url("../fonts/cubic/cubic.eot?#iefix") format("embedded-opentype"), url("../fonts/cubic/cubic.woff") format("woff"), url("../fonts/cubic/cubic.ttf") format("truetype");
+}
+
+html{
+    background-image: url("images/background_build_site.jpeg");
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: rgba(7, 30, 45, 0.6);
+    color: #ffffff;
+    font-family: "Rounded Elegance",arial,sans-serif;
+    font-size: 1.6em;
+    min-height: 100%;
+    text-align: center;
+}
+
+#body{
+    padding: 15% 25%;
+}
+
+#siteName{
+    text-align: center;
+}
+
+h1, h2{
+    text-align: center;
+}
+
+a, a:hover, a:focus{
+    color: #ffffff;
+}
+
+.margin-bot-top{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+input[type="email"] {
+    background-color: #1e1a2c;
+    border: 1px solid #ffffff;
+    border-radius: 0;
+    color: #ffffff;
+    width: 100%;
+    font-size: 1.5em;
+    padding: 2px;
+}
+
+input[type="submit"], button{
+    font-family: "Cubic",arial,sans-serif;
+    background-color: #0a2a3f;
+    border: 2px solid #071e2d;
+    border-radius: 0;
+    color: #ffffff;
+    width: 100%;
+    font-size: 1.5em;
+}
+
+.modal {
+    position: fixed;
+    top: 35%;
+    left: 50%;
+    width: 50%;
+    max-height: 310px;
+    height: auto;
+    z-index: 2000;
+    visibility: hidden;
+    background: #1e1a2c;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.show {
+    visibility: visible;
+}
+
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.show ~ .overlay {
+    opacity: 1;
+    visibility: visible;
+}
+.popup-content {
+    color: #fff;
+    position: relative;
+    border-radius: 3px;
+    margin: 0 auto;
+    padding: 6% 10%;
+}
+
+.popup-content > div {
+    padding: 0;
+    font-weight: 300;
+    font-size: 1.15em;
+}
+
+.close, .close:focus, .close:hover {
+    font-family: "Cubic", arial, sans-serif;
+    position: absolute;
+    z-index: 9999;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+    opacity: 1 !important;
+    -webkit-transition: all ease-in-out 0.3s;
+    -o-transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
+    color: #ffffff;
+}
+
+.close:focus, .close:hover {
+    opacity: 0.2 !important;
+}
+
+/* Effet blur */
+.show.blur-effect ~ .overlay {
+    background: rgba(13,80,101,0.4);
+}
+
+.show.blur-effect ~ .container, .show.blur-effect ~ .bgall{
+    -webkit-filter: blur(30px);
+    -moz-filter: blur(30px);
+    filter: blur(30px);
+}
+
+.blur-effect .popup-content {
+    -webkit-transform: translateY(-5%);
+    -moz-transform: translateY(-5%);
+    -ms-transform: translateY(-5%);
+    transform: translateY(-5%);
+    opacity: 0;
+}
+
+.show.blur-effect ~ .container,
+.blur-effect .popup-content, .show.blur-effect ~ .bgall {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.show.blur-effect .popup-content {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.contact-text{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contact-picto{
+    font-size: 1.9em !important;
+    text-align: center;
+}
